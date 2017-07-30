@@ -1,0 +1,19 @@
+{
+  "name": "url_shortener",
+  "version": "1.0.0",
+  "description": "A url shortener microservice",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.15.3",
+    "mongoose": "^4.11.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mayankkamboj47/url_shortener"
+  },
+  "author": "",
+  "license": "GNU"
+}

@@ -1,16 +1,13 @@
 var express = require('express')
 var mongoose = require('mongoose')
-mongoose.connect(process.env.SECRET,{useMongoClient:true});
+mongoose.connect(process.env.SECRET);
 var Url = require('./urls.js');
 var WEBURL = "http://localhost:3000";
 
 function add(stuff,res){
-  console.log('about to find ', stuff);
 Url.findOne({url:stuff},function(err,doc){
-  console.log('inside the find function');
 if(err)  res.send(err);
 if(!doc){
-  console.log('wasn\'t found');
 Url.findOne().sort('-id').exec(function(err,item){
 if(err) res.send(err);
 var id = item.id+1;   // One greater than the largest index
